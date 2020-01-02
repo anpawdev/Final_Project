@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../Logo/Logo';
@@ -12,13 +12,13 @@ class NavBar extends React.Component {
       <div className="navbar text-uppercase">
         <Logo />
         <div className="navbar navbar-links">
-          <Link to='/'>Home</Link>
-          <Link to='/FAQ'>FAQ</Link>
-          <Link to='/regulamin'>Regulamin</Link>
-          <Link to='/contact'>Kontakt</Link>
-          <Link to='/bag'>
+          <NavLink href='/'>Home</NavLink>
+          <NavLink href='/FAQ'>FAQ</NavLink>
+          <NavLink href='/regulamin'>Regulamin</NavLink>
+          <NavLink href='/contact'>Contact</NavLink>
+          <NavLink href='/bag'>
             <FontAwesomeIcon icon={faShoppingBag} />
-          </Link>
+          </NavLink>
         </div>
       </div>
     );
