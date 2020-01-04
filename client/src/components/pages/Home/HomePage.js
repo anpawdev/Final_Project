@@ -1,5 +1,6 @@
 import React from 'react';
 import './HomePage.scss';
+import Products from '../../features/Products/ProductsContainer';
 
 class HomePage extends React.Component {
   
@@ -14,6 +15,9 @@ class HomePage extends React.Component {
             <li>Price: lowest first</li>
             <li>Price: highest first</li>
           </ul>
+        </div>
+        <div className="products">
+          <Products />
         </div>
       </div>
     )
