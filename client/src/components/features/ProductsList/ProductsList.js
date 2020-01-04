@@ -2,6 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 
 import ProductsSummary from '../ProductsSummary/ProductsSummary';
+import './ProductsList.scss'
 
 const ProductsList = ({ products }) => (
   <div>
@@ -14,7 +15,7 @@ const ProductsList = ({ products }) => (
 ProductsList.propTypes = {
  products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
     })

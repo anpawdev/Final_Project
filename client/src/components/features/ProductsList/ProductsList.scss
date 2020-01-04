@@ -1,0 +1,20 @@
+.products-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.product {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: #f5f5f5;
+    margin: 20px;
+
+    &-info {
+        color: #000;
+        opacity: 0.7;
+    }
+    &-image {
+        width: 80%;
+        padding: 24px;
+    }
+}

@@ -13,11 +13,8 @@ class Products extends React.Component {
     const { products } = this.props;
 
     return (
-      <div>
-        Products
-        <div>
+      <div className="home-product-list">
           <ProductsList products={products} />
-        </div>
       </div>
     );
   }
@@ -27,7 +24,7 @@ class Products extends React.Component {
 Products.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
     })

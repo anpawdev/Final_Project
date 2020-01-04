@@ -1,21 +1,22 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { Button } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
-const ProductsSummary = ({ id, title, content }) => (
-  <article>
-    <p>{title}</p>
-    <p>{content}</p>
-    <Button variant="primary">
-      Add to bag
-    </Button>
-  </article>
+const ProductsSummary = ({ id, info, img, title, price }) => (
+  <NavLink exact to={"/product"} className="product col-sm-12 col-md-6 col-lg-4">
+    <p className="product-info">{info}</p>
+    <img className="product-image" src={img} alt="product"/>
+    <p className="product-title">{title}</p>
+    <p className="product-price">${price}</p>
+  </NavLink>
 );
 
 ProductsSummary.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
+  info: PropTypes.string,
+  img: PropTypes.string,
   title: PropTypes.string,
-  content: PropTypes.string,
+  price: PropTypes.number,
 };
 
 export default ProductsSummary;
