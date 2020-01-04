@@ -32,7 +32,7 @@ export default function reducer(statePart = initialState, action = {}) {
 export const loadProductsRequest = () => {
     return dispatch => {
   
-    axios.get(`${API_URL}/posts`).then(res => {
+    axios.get(`${API_URL}/products`).then(res => {
         dispatch(loadProducts(res.data));
       })
       .catch(err => {
