@@ -1,25 +1,19 @@
 .footer {
     display: flex;
     justify-content: space-between;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    padding: 50px;
 
     .footer-copyright {
-        font-size: 18px;
         opacity: 0.5;
-        letter-spacing: 0.9px;
-        margin-left: 35px;
     }
 
     .footer-links {
         display: flex;
         justify-content: flex-end;
         text-transform: uppercase;
-
-        a {
-            color: #000;
-
-            &:hover {
-             text-decoration: underline;   
-            }
-        }
+        margin-right: -20px;
+        line-height: 32px;
     }
 }

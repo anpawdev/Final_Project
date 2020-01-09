@@ -1,0 +1,19 @@
+@import './normalize.scss';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  line-height: 1.7;
+  overflow-y: scroll;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
