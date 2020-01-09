@@ -1,0 +1,22 @@
+.faq {
+    padding: 30px 40px;
+    text-align: justify;
+
+    &-header {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Clarins-Regular'; 
+        line-height: 60px;
+        padding-bottom: 30px;
+    }
+
+    &-content {
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    &-question {
+        font-weight: 600;
+        opacity: 0.7;
+    }
+}
