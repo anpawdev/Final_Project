@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout/MainLayout';
 import Home from './components/pages/Home/HomePage';
-import Bag from './components/pages/Bag/BagPage';
+import Basket from './components/pages/Basket/BasketPage';
 import FAQ from './components/pages/FAQ/FAQPage';
 import TermsConditions from './components/pages/TermsConditions/TermsConditions';
 import Contact from './components/pages/Contact/ContactPage';
@@ -20,7 +20,7 @@ class App extends React.Component {
           <Route path="/FAQ" exact component={FAQ} />
           <Route path="/termsconditions" exact component={TermsConditions} />
           <Route path="/contact" exact component={Contact} />
-          <Route path="/bag" exact component={Bag} />
+          <Route path="/basket" exact component={Basket} />
           <Route component={NotFound} />
         </Switch>
       </MainLayout>
