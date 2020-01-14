@@ -13,7 +13,7 @@ class NavBar extends React.Component {
             <div className="footer-links">
                 <NavLink href='/'>Home</NavLink>
                 <NavLink href='/FAQ'>FAQ</NavLink>
-                <NavLink href='/regulamin'>Regulamin</NavLink>
+                <NavLink href='/termsconditions'>Terms</NavLink>
                 <NavLink href='/contact'>Contact</NavLink>
             </div>
         </div>
