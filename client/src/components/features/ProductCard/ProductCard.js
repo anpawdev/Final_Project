@@ -48,13 +48,16 @@ export class ProductCard extends React.Component {
     }
 };
 
-const mapStateToProps = state => state.products
+function mapStateToProps(state) {
+    return {
+        products: state.products
+    }
+}
 
-const mapDispatchToProps = dispatch => bindActionCreators(
-    {
-        addToBasket
-    },
-    dispatch,
-)
+function matchDispatchToProps(dispatch) {
+    return bindActionCreators(
+        { addToBasket: addToBasket }, dispatch
+    )
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductCard);
+export default connect(mapStateToProps, matchDispatchToProps)(ProductCard);

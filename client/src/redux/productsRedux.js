@@ -14,15 +14,51 @@ export const getProducts = ({ products }) => products;
 
 /* ACTIONS */
 export const LOAD_PRODUCTS = createActionName('LOAD_PRODUCTS');
+export const ADD_TO_BASKET = createActionName('ADD_TO_BASKET');
+export const ADD_AMOUNT = createActionName('ADD_AMOUNT');
+export const REMOVE_AMOUNT = createActionName('REMOVE_AMOUNT');
 
 export const loadProducts = payload => ({ payload, type: LOAD_PRODUCTS });
+export const addToBasket = payload => ({ payload, type: ADD_TO_BASKET });
+export const addAmount = payload => ({ payload, type: ADD_AMOUNT });
+export const removeAmount = payload => ({ payload, type: REMOVE_AMOUNT });
 
 /* REDUCER */
 
-export default function reducer(statePart = initialState, action = {}) {
+export default function reducer(statePart = initialState, state = { "added": [], "summary": 0 }, action = {}) {
     switch (action.type) {
       case LOAD_PRODUCTS:
         return [ ...action.payload ];
+        case ADD_TO_BASKET:
+          let added = [...state.added, action.payload];
+          state.added.map((product) => {
+              if (product.id === action.payload.id) {
+                  product.amount += 1;
+                  added = [...state.added]
+              }
+          })
+          return {
+              "added": added,
+              "summary": state.summary + action.payload.price,
+          }
+
+      case ADD_AMOUNT:
+          state.added.map((product) => {
+              if (product.id === action.payload.id) { product.amount += 1 }
+          })
+          return {
+              "added": [...state.added],
+              "summary": state.summary + action.payload.price,
+          }
+
+      case REMOVE_AMOUNT:
+          state.added.map((product) => {
+              if (product.id === action.payload.id) { product.amount -= 1 }
+          })
+          return {
+              "added": state.added.filter(function (object) { return object.amount !== 0 }),
+              "summary": state.summary - action.payload.price,
+          }
       default:
         return statePart;
     }

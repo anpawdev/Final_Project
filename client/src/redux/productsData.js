@@ -7,6 +7,7 @@ export default function () {
             "info": "Sale",
             "img": "../../images/planner.jpg",
             "id": 1,
+            "amount": 1
         },
         {
             "title": "Desk",
@@ -15,6 +16,7 @@ export default function () {
             "info": "New",
             "img": "../images/desk.jpg",
             "id": 2,
+            "amount": 1
         },
         {
             "title": "Glass",
@@ -23,6 +25,7 @@ export default function () {
             "info": "New",
             "img": "../images/glass.jpg",
             "id": 3,
+            "amount": 1
         },
         {
             "title": "Plant",
@@ -31,6 +34,7 @@ export default function () {
             "info": "New",
             "img": "../images/plant.jpg",
             "id": 4,
+            "amount": 1
         },
         {
             "title": "Jar",
@@ -39,6 +43,7 @@ export default function () {
             "info": "Sale",
             "img": "../images/jar.jpg",
             "id": 5,
+            "amount": 1
         },
         {
             "title": "Lamp",
@@ -47,6 +52,7 @@ export default function () {
             "info": "Last",
             "img": "../images/lamp.jpg",
             "id": 6,
+            "amount": 1
         },
         {
             "title": "Spoon",
@@ -55,6 +61,7 @@ export default function () {
             "info": "Last",
             "img": "../images/spoon.jpg",
             "id": 7,
+            "amount": 1
         },
         {
             "title": "Clips",
@@ -63,6 +70,7 @@ export default function () {
             "info": "New",
             "img": "../images/clips.jpg",
             "id": 8,
+            "amount": 1
         },
         {
             "title": "Coaster",
@@ -71,6 +79,7 @@ export default function () {
             "info": "New",
             "img": "../images/coaster.jpg",
             "id": 9,
+            "amount": 1
         },
         {
             "title": "Bowl",
@@ -79,6 +88,7 @@ export default function () {
             "info": "Sale",
             "img": "../images/bowl.jpg",
             "id": 10,
+            "amount": 1
         },
         {
             "title": "Blanket",
@@ -87,6 +97,7 @@ export default function () {
             "info": "New",
             "img": "../images/blanket.jpg",
             "id": 11,
+            "amount": 1
         },
         {
             "title": "Clock",
@@ -95,6 +106,7 @@ export default function () {
             "info": "New",
             "img": "../images/clock.jpg",
             "id": 12,
+            "amount": 1
         },
         {
             "title": "Tray",
@@ -103,6 +115,7 @@ export default function () {
             "info": "New",
             "img": "../images/tray.jpg",
             "id": 13,
+            "amount": 1
         },
         {
             "title": "Headphones",
@@ -111,6 +124,7 @@ export default function () {
             "info": "New",
             "img": "../images/headphones.jpg",
             "id": 14,
+            "amount": 1
         },
         {
             "title": "Mask",
@@ -119,6 +133,7 @@ export default function () {
             "info": "Last",
             "img": "../images/mask.jpg",
             "id": 15,
+            "amount": 1
         },
         {
             "title": "Bush",
@@ -127,6 +142,7 @@ export default function () {
             "info": "Sale",
             "img": "../images/brush.jpg",
             "id": 16,
+            "amount": 1
         },
         {
             "title": "Pins",
@@ -135,6 +151,7 @@ export default function () {
             "info": "New",
             "img": "../images/pins.jpg",
             "id": 17,
+            "amount": 1
         },
         {
             "title": "Cutlery",
@@ -143,6 +160,7 @@ export default function () {
             "info": "Sale",
             "img": "../images/cutlery.jpg",
             "id": 18,
+            "amount": 1
         },
         {
             "title": "Watch",
@@ -151,6 +169,7 @@ export default function () {
             "info": "New",
             "img": "../images/watch.jpg",
             "id": 19,
+            "amount": 1
         },
         {
             "title": "Yarn",
@@ -159,6 +178,7 @@ export default function () {
             "info": "Sale",
             "img": "../images/yarn.jpg",
             "id": 20,
+            "amount": 1
         },
     ]
 }
