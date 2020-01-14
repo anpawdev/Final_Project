@@ -1,6 +1,7 @@
 import React from 'react';
 import Basket from './Basket';
 import BasketSummary from './BasketSummary';
+import './BasketPage.scss';
 
 class BasketPage extends React.Component {
   constructor(props) {
@@ -18,9 +19,9 @@ class BasketPage extends React.Component {
           <div className="basketpage-container">
               <Basket />
               <div className="basket-pay row">
-                  <div className="col-8"></div>
-                  <div className="col-4">
-                      <button className="basket-total-order" onClick={() => { this.initSummary() }}>Finish your order</button>
+                  <div className="col-9"></div>
+                  <div className="col-3">
+                      <button className="basket-total-order" onClick={() => { this.initSummary() }}>Pay</button>
                   </div>
               </div>
 

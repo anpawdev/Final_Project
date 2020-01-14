@@ -3,7 +3,10 @@ import { API_URL } from '../config';
 
 /* INITIAL STATE */
 
-const initialState = [];
+const initialState = {
+    added: [],
+    summary: 0
+};
 
 // action name creator
 const reducerName = 'products';
@@ -25,7 +28,7 @@ export const removeAmount = payload => ({ payload, type: REMOVE_AMOUNT });
 
 /* REDUCER */
 
-export default function reducer(statePart = initialState, state = { "added": [], "summary": 0 }, action = {}) {
+export default function reducer(state = initialState, action) {
     switch (action.type) {
       case LOAD_PRODUCTS:
         return [ ...action.payload ];
@@ -41,7 +44,6 @@ export default function reducer(statePart = initialState, state = { "added": [],
               "added": added,
               "summary": state.summary + action.payload.price,
           }
-
       case ADD_AMOUNT:
           state.added.map((product) => {
               if (product.id === action.payload.id) { product.amount += 1 }
@@ -60,7 +62,7 @@ export default function reducer(statePart = initialState, state = { "added": [],
               "summary": state.summary - action.payload.price,
           }
       default:
-        return statePart;
+        return state;
     }
 };
 

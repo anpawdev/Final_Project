@@ -31,16 +31,16 @@ class Basket extends React.Component {
         return (
             <div>
                 <h1 className="basket-header">Basket</h1>
-
+                
                 {this.basketListProducts()}
-
+                
                 <div className="basket-code row">
                     <div className="col-9"></div>
                     <div className="col-3"><input className="basket-input" placeholder="Write a code" /></div>
                 </div>
                 <div className="basket-pay row">
                     <div className="col-9"></div>
-                    <div className="basket-total-pay col-3">Total: {this.props.basket.summary} $</div>
+                    <div className="basket-total-pay col-3">Total: $ {this.props.basket.summary} </div>
                 </div>
 
             </div>
