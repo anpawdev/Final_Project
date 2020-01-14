@@ -16,6 +16,10 @@
         justify-content: flex-end;
         text-transform: uppercase;
         margin-right: -20px;
-        line-height: 32px
+        line-height: 32px;
+
+        a {
+            padding: 10px;
+        }
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import './Footer.scss';
 
 class NavBar extends React.Component {
@@ -11,10 +11,10 @@ class NavBar extends React.Component {
                 <p className="copyright">All rights reserved &copy; by Anna Pawlik 2020</p>
             </div>
             <div className="footer-links">
-                <NavLink href='/'>Home</NavLink>
-                <NavLink href='/FAQ'>FAQ</NavLink>
-                <NavLink href='/termsconditions'>Terms</NavLink>
-                <NavLink href='/contact'>Contact</NavLink>
+                <NavLink to='/'>Home</NavLink>
+                <NavLink to='/FAQ'>FAQ</NavLink>
+                <NavLink to='/termsconditions'>Terms</NavLink>
+                <NavLink to='/contact'>Contact</NavLink>
             </div>
         </div>
     );
