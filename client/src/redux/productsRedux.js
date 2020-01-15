@@ -20,11 +20,13 @@ export const LOAD_PRODUCTS = createActionName('LOAD_PRODUCTS');
 export const ADD_TO_BASKET = createActionName('ADD_TO_BASKET');
 export const ADD_AMOUNT = createActionName('ADD_AMOUNT');
 export const REMOVE_AMOUNT = createActionName('REMOVE_AMOUNT');
+export const DELETE_PRODUCT = createActionName('DELETE_PRODUCT');
 
 export const loadProducts = payload => ({ payload, type: LOAD_PRODUCTS });
 export const addToBasket = payload => ({ payload, type: ADD_TO_BASKET });
 export const addAmount = payload => ({ payload, type: ADD_AMOUNT });
 export const removeAmount = payload => ({ payload, type: REMOVE_AMOUNT });
+export const deleteProduct = payload => ({ payload, type: DELETE_PRODUCT });
 
 /* REDUCER */
 
@@ -36,7 +38,7 @@ export default function reducer(state = initialState, action) {
           let added = [...state.added, action.payload];
           state.added.map((product) => {
               if (product.id === action.payload.id) {
-                  product.amount += 1;
+                  product.amount = 1;
                   added = [...state.added]
               }
           })
@@ -60,6 +62,15 @@ export default function reducer(state = initialState, action) {
           return {
               "added": state.added.filter(function (object) { return object.amount !== 0 }),
               "summary": state.summary - action.payload.price,
+          }
+
+      case DELETE_PRODUCT:
+          state.added.map((product) => {
+              if (product.id === action.payload.id) { product.amount = 0 }
+          })
+          return {
+              "added": state.added.filter(function (object) { return object.amount !== 0 }),
+              "summary": action.payload.amount + action.payload.price,
           }
       default:
         return state;

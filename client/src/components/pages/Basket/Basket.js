@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { addAmount, removeAmount } from '../../../redux/productsRedux';
+import { addAmount, removeAmount, deleteProduct } from '../../../redux/productsRedux';
 import HtmlBox from '../../common/HtmlBox';
 import cutText from '../../../utils/cutText';
 
@@ -24,8 +24,10 @@ class Basket extends React.Component {
                         <button className="basket-product-amount-btn" onClick={() => this.props.removeAmount(product)}>-</button>
                         <p className="basket-product-amount-value">{product.amount}</p>
                         <button className="basket-product-amount-btn" onClick={() => this.props.addAmount(product)}>+</button>
+                        <button className="basket-product-amount-delete" onClick={() => this.props.deleteProduct(product)}>delete</button>
                     </div>
                 </div>
+                
             );
         });
     }
@@ -61,7 +63,8 @@ function matchDispatchToProps(dispatch) {
     return bindActionCreators(
         {
             addAmount,
-            removeAmount
+            removeAmount,
+            deleteProduct
         }, dispatch
     )
 }

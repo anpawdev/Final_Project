@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './BasketSummary.scss';
 
 class BasketSummary extends React.Component {
 
@@ -21,7 +22,7 @@ class BasketSummary extends React.Component {
             <div className="basket-summary-container">
                 <h1 className="basket-summary-header">Your order</h1>
                 <div className="row basket-summary">
-                    <div className="basket-summary-text col-6">Name</div>
+                    <div className="basket-summary-text col-6">Product</div>
                     <div className="basket-summary-text col-2">Amount</div>
                     <div className="basket-summary-text col-2">Price</div>
                     <div className="basket-summary-text col-2">Total price</div>
@@ -29,7 +30,7 @@ class BasketSummary extends React.Component {
                 {this.createSummary()}
                 <div className="row basket-summary">
                     <div className="basket-summary-total col-10">Total</div>
-                    <div className="basket-summary-total col-2">$ {this.props.basket.summary}</div>
+                    <div className="basket-summary-total col-2">${this.props.basket.summary}</div>
 
                 </div>
             </div>

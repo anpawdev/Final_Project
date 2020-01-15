@@ -41,19 +41,30 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        &-btn {
-            border: none;
-            padding: 15px;
-            background-color: rgba(204, 204, 204, 0.1);
-            margin: 0 10px;
-        }
+        flex-wrap: wrap;
 
         &-value {
             background-color: rgba(204, 204, 204, 0.3);
-            padding: 10px 15px;
+            padding: 5px 10px;
             margin-bottom: 0;
+            flex-basis: 10%;
         }
+
+        &-btn {
+            border: none;
+            padding: 10px;
+            background-color: rgba(204, 204, 204, 0.1);
+            margin: 0 10px;
+            flex-basis: 10%;
+        }
+
+        &-delete {
+            color: rgb(155, 17, 17);
+            background-color: #fff;
+            border: none;
+            flex-basis: 100%;
+        }
+
     }
 }
 
