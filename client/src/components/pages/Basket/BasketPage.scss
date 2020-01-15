@@ -1,0 +1,81 @@
+.basketpage-container {
+    margin: 20px;
+    padding: 15px;
+
+   
+    .basket-total-order {
+        width: 244px;
+        height: 45px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        font-size: 20px;
+        letter-spacing: 0.8px;
+        margin-top: 32px;
+    }
+}
+
+
+.basket-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 20px 0;
+    
+    &-image {
+        width: 120px;
+        height: 150px;
+    }
+
+    &-title {
+        font-size: 22px;
+    }
+
+    &-price {
+        color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+    }
+
+    &-amount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-btn {
+            border: none;
+            padding: 15px;
+            background-color: rgba(204, 204, 204, 0.1);
+            margin: 0 10px;
+        }
+
+        &-value {
+            background-color: rgba(204, 204, 204, 0.3);
+            padding: 10px 15px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.basket-code {
+    margin-top: 50px;
+
+    .basket-input {
+        width: 244px;
+        text-align: center;
+        padding: 7px;
+        background-color: rgba(204, 204, 204, 0.3);
+        border: none;
+    }
+}
+
+.basket-total-pay {
+    text-align: end;
+    padding: 20px;
+    margin-left: -10px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+

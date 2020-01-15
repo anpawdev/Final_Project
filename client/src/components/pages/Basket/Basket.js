@@ -2,25 +2,28 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addAmount, removeAmount } from '../../../redux/productsRedux';
+import HtmlBox from '../../common/HtmlBox';
+import cutText from '../../../utils/cutText';
+
 
 class Basket extends React.Component {
 
     basketListProducts() {
         return this.props.basket.added.map((product) => {
             return (
-                <div className="basket-product-container" key={product.id}>
+                <div className="basket-product" key={product.id}>
                     <div className="basket-product-image col-2">
                         <img className="basket-product-image" src={product.img} alt="product" />
                     </div>
-                    <div className="basket-product-content col-5">
+                    <div className="basket-product-content col-7">
                         <h2 className="basket-product-title">{product.title}</h2>
-                        <p className="basket-product-text">{product.content}</p>
+                        <HtmlBox>{cutText(product.content, 160)}</HtmlBox>
                     </div>
-                    <div className="basket-product-price col-2">${product.price * product.amount}</div>
-                    <div className="basket-product-amount col-3">
-                        <button className="basket-product-amount-btn" onClick={() => this.props.addAmount(product)}>+</button>
-                        <p className="basket-product-value">{product.amount}</p>
+                    <div className="basket-product-price col-1">${product.price * product.amount}</div>
+                    <div className="basket-product-amount col-2">
                         <button className="basket-product-amount-btn" onClick={() => this.props.removeAmount(product)}>-</button>
+                        <p className="basket-product-amount-value">{product.amount}</p>
+                        <button className="basket-product-amount-btn" onClick={() => this.props.addAmount(product)}>+</button>
                     </div>
                 </div>
             );
