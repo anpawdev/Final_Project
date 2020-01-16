@@ -8,10 +8,10 @@ class BasketSummary extends React.Component {
         return this.props.basket.added.map((product) => {
             return (
                 <div className="row basket-summary-product" key={product.id}>
-                    <div className="basket-summary-product-title col-6">{product.title}</div>
-                    <div className="basket-summary-product-amount col-2">{product.amount}</div>
-                    <div className="basket-summary-product-price col-2">${product.price}</div>
-                    <div className="basket-summary-product-total-price col-2">${product.price * product.amount}</div>
+                    <div className="basket-summary-product-title col-3">{product.title}</div>
+                    <div className="basket-summary-product-amount col-3">{product.amount}</div>
+                    <div className="basket-summary-product-price col-3">${product.price}</div>
+                    <div className="basket-summary-product-total-price col-3">${product.price * product.amount}</div>
                 </div>
             );
         });
@@ -22,15 +22,15 @@ class BasketSummary extends React.Component {
             <div className="basket-summary-container">
                 <h1 className="basket-summary-header">Your order</h1>
                 <div className="row basket-summary">
-                    <div className="basket-summary-text col-6">Product</div>
-                    <div className="basket-summary-text col-2">Amount</div>
-                    <div className="basket-summary-text col-2">Price</div>
-                    <div className="basket-summary-text col-2">Total price</div>
+                    <div className="basket-summary-text col-3">Product</div>
+                    <div className="basket-summary-text col-3">Amount</div>
+                    <div className="basket-summary-text col-3">Price</div>
+                    <div className="basket-summary-text col-3">Subtotal</div>
                 </div>
                 {this.createSummary()}
                 <div className="row basket-summary">
-                    <div className="basket-summary-total col-10">Total</div>
-                    <div className="basket-summary-total col-2">${this.props.basket.summary}</div>
+                    <div className="basket-summary-total col-8">Total</div>
+                    <div className="basket-summary-total col-4">$ {this.props.basket.summary}</div>
 
                 </div>
             </div>

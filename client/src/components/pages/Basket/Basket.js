@@ -12,15 +12,15 @@ class Basket extends React.Component {
         return this.props.basket.added.map((product) => {
             return (
                 <div className="basket-product" key={product.id}>
-                    <div className="basket-product-image col-2">
+                    <div className="basket-product-image col-md-2 col-lg-2">
                         <img className="basket-product-image" src={product.img} alt="product" />
                     </div>
-                    <div className="basket-product-content col-7">
+                    <div className="basket-product-content col-lg-7">
                         <h2 className="basket-product-title">{product.title}</h2>
                         <HtmlBox>{cutText(product.content, 160)}</HtmlBox>
                     </div>
-                    <div className="basket-product-price col-1">${product.price * product.amount}</div>
-                    <div className="basket-product-amount col-2">
+                    <div className="basket-product-price col-lg-1">${product.price * product.amount}</div>
+                    <div className="basket-product-amount col-lg-2">
                         <button className="basket-product-amount-btn" onClick={() => this.props.removeAmount(product)}>-</button>
                         <p className="basket-product-amount-value">{product.amount}</p>
                         <button className="basket-product-amount-btn" onClick={() => this.props.addAmount(product)}>+</button>
@@ -40,12 +40,12 @@ class Basket extends React.Component {
                 {this.basketListProducts()}
                 
                 <div className="basket-code row">
-                    <div className="col-9"></div>
-                    <div className="col-3"><input className="basket-input" placeholder="Write a code" /></div>
+                    <div className="col-lg-9"></div>
+                    <div className="col-lg-3"><input className="basket-input" placeholder="Write a code" /></div>
                 </div>
                 <div className="basket-pay row">
                     <div className="col-9"></div>
-                    <div className="basket-total-pay col-3">Total: $ {this.props.basket.summary} </div>
+                    <div className="basket-total-pay col-lg-3">Total: $ {this.props.basket.summary} </div>
                 </div>
 
             </div>

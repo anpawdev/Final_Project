@@ -27,7 +27,7 @@ class ProductsList extends React.Component {
         const { presentPage } = this.state;
 
         return (
-            <div className="home-products-list col-sm-12 col-md-8 col-lg-12">
+            <div className="home-products-list">
                 <div className="products-list">
                     {(this.props.sortBy.products.slice(this.state.currentProducts[0], this.state.currentProducts[1])).map((product, i) => {
                         return (
@@ -43,7 +43,7 @@ class ProductsList extends React.Component {
                         )
                     })}
                 </div>
-                <div className="products-list-pagination">
+                <div className="products-list-pagination col-lg-12 col-md-12">
                     <Pagination aria-label="Page navigation" >    
                         {[...Array(this.pagesCount)].map((page, i) =>
                             <PaginationItem active={i === presentPage} key={i}>

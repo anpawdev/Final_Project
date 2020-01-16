@@ -6,7 +6,7 @@ class NavBar extends React.Component {
 
   render() {
     return (
-        <div className="footer">
+        <div className="footer col-sm-12">
             <div className="footer-copyright">
                 <p className="copyright">All rights reserved &copy; by Anna Pawlik 2020</p>
             </div>

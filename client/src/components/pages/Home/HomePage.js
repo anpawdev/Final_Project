@@ -21,7 +21,7 @@ class HomePage extends React.Component {
   render () {
     return (
       <div className="home">
-        <div className="home-sort col-sm-12 col-md-4 col-lg-3">
+        <div className="home-sort col-md-12 col-lg-3">
           <p className="home-sort-header">Sort by:</p>
           <ul className="home-sort-list">
             <li data-prop='title' data-order='asc' onClick={event => this.sortBy(event)}>Name: A-Z</li>
@@ -30,7 +30,7 @@ class HomePage extends React.Component {
             <li data-prop='price' data-order='desc' onClick={event => this.sortBy(event)}>Price: highest first</li>
           </ul>
         </div>
-        <div className="products col-lg-9">
+        <div className="products col-md-12 col-lg-9">
           <ProductsList sortBy={this.state} />
         </div>
       </div>

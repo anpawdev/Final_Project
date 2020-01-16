@@ -19,8 +19,8 @@ class BasketPage extends React.Component {
           <div className="basketpage-container">
               <Basket />
               <div className="basket-pay row">
-                  <div className="col-9"></div>
-                  <div className="col-3">
+                  <div className="col"></div>
+                  <div className="col-md-12 col-lg-3">
                       <button className="basket-total-order" onClick={() => { this.initSummary() }}>Pay</button>
                   </div>
               </div>

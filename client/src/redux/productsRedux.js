@@ -70,7 +70,7 @@ export default function reducer(state = initialState, action) {
           })
           return {
               "added": state.added.filter(function (object) { return object.amount !== 0 }),
-              "summary": action.payload.amount + action.payload.price,
+              "summary": state.summary - action.payload.price,
           }
       default:
         return state;
