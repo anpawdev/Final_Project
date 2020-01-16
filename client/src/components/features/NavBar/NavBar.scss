@@ -1,15 +1,50 @@
-.navbar-links {
-    letter-spacing: 6.4px;
-    font-family: "Myriad Pro";
-    opacity: 0.5;
-        
-    a {
-        color: #000;
-        padding: 10px;
+.navbar-desktop {
+    display: flex;
+    justify-content: space-between;
 
-        &:hover {
-            text-decoration: underline;
+    .navbar-links {
+        letter-spacing: 6.4px;
+        font-family: "Myriad Pro";
+        opacity: 0.5;
+            
+        a {
             color: #000;
+            padding: 10px;
+    
+            &:hover {
+                text-decoration: underline;
+                color: #000;
+            }
         }
+    }
+}
+
+
+.navbar-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .navbar-mobile {
+        display: block;
+    }
+
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-light .navbar-toggler {
+        height: 55px;
+    }
+
+    .nav-item {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      
+      &:first-of-type {
+        margin-top: 20px;
+      }
+      
     }
 }
