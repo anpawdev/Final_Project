@@ -1,15 +1,16 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import './ProductCard.scss';
+import swal from 'sweetalert';
 import { addToBasket } from '../../../redux/productsRedux';
+import './ProductCard.scss';
 
-export class ProductCard extends React.Component {
+class ProductCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
-
+    
     componentWillMount() {
         this.props.products.map((product) => {
             if (product.id === this.props.match.params.id) {
@@ -39,7 +40,13 @@ export class ProductCard extends React.Component {
                         </p>
                         <button
                             className="product-card-button"
-                            onClick={() => this.props.addToBasket(this.props.products[this.props.match.params.id])}> Add to basket
+                            onClick={() => this.props.addToBasket(this.props.products[this.props.match.params.id]) 
+                            && swal({
+                                title: "Success",
+                                text: "Add your product to basket!",
+                                icon: "success",
+                                timer: 3000,
+                              })}> Add to basket
                         </button>
                     </div>
                 </div>

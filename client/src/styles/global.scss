@@ -17,3 +17,14 @@ a, a:hover, a:visited {
   color: #000;
 }
 
+.swal-modal {
+    .swal-button {
+      background-color: rgba(204, 204, 204, 0.7);
+      color: rgba(0, 0, 0, 0.4);
+      
+      &:hover {
+        background-color: rgba(204, 204, 204, 0.9);
+      }
+    }
+}
+

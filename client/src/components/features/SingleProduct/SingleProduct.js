@@ -15,6 +15,7 @@ const SingleProduct = (props) => (
 
 SingleProduct.propTypes = {
   id: PropTypes.number,
+  index: PropTypes.number,
   info: PropTypes.string,
   img: PropTypes.string,
   title: PropTypes.string,

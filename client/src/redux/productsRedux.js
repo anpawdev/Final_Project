@@ -5,7 +5,8 @@ import { API_URL } from '../config';
 
 const initialState = {
     added: [],
-    summary: 0
+    summary: 0,
+    singleProduct: {},
 };
 
 // action name creator

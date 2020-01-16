@@ -10,7 +10,7 @@ const NavBar = (props) => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
-
+  
   return (
     <div>
       <div className="navbar-desktop text-uppercase">
