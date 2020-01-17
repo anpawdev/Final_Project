@@ -59,14 +59,13 @@ function mapStateToProps(state) {
     }
 }
 
-function matchDispatchToProps(dispatch) {
-    return bindActionCreators(
-        {
-            addAmount,
-            removeAmount,
-            deleteProduct
-        }, dispatch
-    )
-}
+const mapDispatchToProps = dispatch => bindActionCreators(
+    {
+        addAmount,
+        removeAmount,
+        deleteProduct
+    }, 
+    dispatch,
+)
 
-export default connect(mapStateToProps, matchDispatchToProps)(Basket);
+export default connect(mapStateToProps, mapDispatchToProps)(Basket);

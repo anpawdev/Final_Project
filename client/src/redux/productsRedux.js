@@ -35,7 +35,7 @@ export default function reducer(state = initialState, action) {
     switch (action.type) {
       case LOAD_PRODUCTS:
         return [ ...action.payload ];
-        case ADD_TO_BASKET:
+      case ADD_TO_BASKET:
           let added = [...state.added, action.payload];
           state.added.map((product) => {
               if (product.id === action.payload.id) {
@@ -43,36 +43,34 @@ export default function reducer(state = initialState, action) {
                   added = [...state.added]
               }
           })
-          return {
-              "added": added,
-              "summary": state.summary + action.payload.price,
-          }
+        return {
+            "added": added,
+            "summary": state.summary + action.payload.price,
+        }
       case ADD_AMOUNT:
           state.added.map((product) => {
               if (product.id === action.payload.id) { product.amount += 1 }
           })
-          return {
-              "added": [...state.added],
-              "summary": state.summary + action.payload.price,
-          }
-
+        return {
+            "added": [...state.added],
+            "summary": state.summary + action.payload.price,
+        }
       case REMOVE_AMOUNT:
           state.added.map((product) => {
-              if (product.id === action.payload.id) { product.amount -= 1 }
+            if (product.id === action.payload.id) { product.amount -= 1 }
           })
-          return {
-              "added": state.added.filter(function (object) { return object.amount !== 0 }),
-              "summary": state.summary - action.payload.price,
-          }
-
+        return {
+            "added": state.added.filter(function (object) { return object.amount !== 0 }),
+            "summary": state.summary - action.payload.price,
+        }
       case DELETE_PRODUCT:
           state.added.map((product) => {
-              if (product.id === action.payload.id) { product.amount = 0 }
+            if (product.id === action.payload.id) { product.amount = 0 }
           })
-          return {
-              "added": state.added.filter(function (object) { return object.amount !== 0 }),
-              "summary": state.summary - action.payload.price,
-          }
+        return {
+            "added": state.added.filter(function (object) { return object.amount !== 0 }),
+            "summary": state.summary - action.payload.price,
+        }
       default:
         return state;
     }
