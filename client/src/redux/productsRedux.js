@@ -64,12 +64,16 @@ export default function reducer(state = initialState, action) {
             "summary": state.summary - action.payload.price,
         }
       case DELETE_PRODUCT:
+        let price = 0;
           state.added.map((product) => {
-            if (product.id === action.payload.id) { product.amount = 0 }
+            if (product.id === action.payload.id) { 
+              price = product.price * product.amount;
+              product.amount = 0; 
+            }
           })
         return {
             "added": state.added.filter(function (object) { return object.amount !== 0 }),
-            "summary": state.summary - action.payload.price,
+            "summary": state.summary - price,
         }
       default:
         return state;
